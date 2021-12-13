@@ -1,5 +1,7 @@
 **python-esmini** is a python wrapper for [Environment Simulator Minimalistic (esmini)](https://github.com/esmini/esmini).
 ### Install the package
+
+python-esmini is now only available for the Linux system.
 ```
 git clone https://github.com/ebadi/python-esmini.git
 cd python-esmini
@@ -23,7 +25,7 @@ while not player.IsQuitRequested():
 To test the python modules, download the esmini resources and run the following scripts:
 ```shell
 python3 example/scenarioplayer.py
-python3 example/intermodule.py.py
+python3 example/intermodule.py
 ```
 
 ### Documentation
@@ -41,7 +43,8 @@ Install [binder](https://github.com/RosettaCommons/binder) and rebuild pybind11 
 ```shell
 git clone https://github.com/esmini/esmini.git
 cd esmini ; cmake . ; cmake --build . 
-cd ..; ./dev-build-bindings.sh
+cd ..
+./dev-build-bindings.sh
 rm LOG_FILE.txt ; pip3 install .  --log LOG_FILE.txt
 ```
 
