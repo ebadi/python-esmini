@@ -1,12 +1,12 @@
-PyEsmini Documentation
+python-esmini Documentation
 ============================
 
 .. toctree::
    :maxdepth: 10
 
-.. image:: index.png
+.. image:: https://ebadi.github.io/python-esmini/index.png
   :width: 400
-  :alt: esmini classes
+  :alt: python-esmini classes
 
 
 .. toctree::
@@ -28,9 +28,4 @@ PyEsmini Documentation
    :maxdepth: 10
 
    pyplayerbase
-
-.. toctree::
-   :maxdepth: 10
-
-   pycontroller
 
