@@ -44,6 +44,24 @@
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -148,6 +166,24 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -242,6 +278,24 @@ void bind_unknown_unknown_1(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -332,6 +386,24 @@ void bind_unknown_unknown_2(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -495,6 +567,24 @@ void bind_unknown_unknown_3(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -776,6 +866,24 @@ void bind_unknown_unknown_4(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -940,6 +1048,24 @@ void bind_unknown_unknown_5(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -1529,6 +1655,24 @@ void bind_unknown_unknown_6(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -2080,6 +2224,24 @@ void bind_unknown_unknown_7(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -2756,6 +2918,24 @@ void bind_unknown_unknown_8(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -3604,6 +3784,24 @@ void bind_unknown_unknown_9(std::function< pybind11::module &(std::string const 
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -4122,6 +4320,24 @@ void bind_unknown_unknown_10(std::function< pybind11::module &(std::string const
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -4623,6 +4839,24 @@ void bind_unknown_unknown_11(std::function< pybind11::module &(std::string const
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -5122,6 +5356,24 @@ void bind_unknown_unknown_12(std::function< pybind11::module &(std::string const
 #include "CommonMini.hpp"
 #include "ControllerFollowGhost.hpp"
 #include "ControllerExternal.hpp"
+#include "OSCAction.hpp"
+#include "OSCBoundingBox.hpp"
+#include "OSCCommon.hpp"
+#include "OSCCondition.hpp"
+#include "OSCDirectory.hpp"
+#include "OSCFile.hpp"
+#include "OSCPosition.hpp"
+#include "OSCManeuver.hpp"
+#include "OSCGlobalAction.hpp"
+#include "ScenarioGateway.hpp"
+#include "ScenarioReader.hpp"
+#include "Story.hpp"
+#include "IdealSensor.hpp"
+#include "Catalogs.hpp"
+#include "OSCAABBTree.hpp"
+#include "OSCParameterDeclarations.hpp"
+#include "OSCPrivateAction.hpp"
+#include "OSCSwarmTrafficGeometry.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -5241,20 +5493,22 @@ PYBIND11_MODULE(pyscenarioengine, root_module) {
 
 	//pybind11::class_<std::shared_ptr<void>>(M(""), "_encapsulated_data_");
 
-	bind_unknown_unknown(M);
-	bind_unknown_unknown_1(M);
-	bind_unknown_unknown_2(M);
-	bind_unknown_unknown_3(M);
-	bind_unknown_unknown_4(M);
-	bind_unknown_unknown_5(M);
-	bind_unknown_unknown_6(M);
-	bind_unknown_unknown_7(M);
-	bind_unknown_unknown_8(M);
-	bind_unknown_unknown_9(M);
-	bind_unknown_unknown_10(M);
-	bind_unknown_unknown_11(M);
-	bind_unknown_unknown_12(M);
-	bind_unknown_unknown_13(M);
+	bind_unknown_unknown(M);  // OK
+	bind_unknown_unknown_1(M); // OK
+	bind_unknown_unknown_2(M); // OK
+	bind_unknown_unknown_3(M); // OK
+	bind_unknown_unknown_4(M); // OK
+	bind_unknown_unknown_5(M); // scenarioengine::ScenarioGateway
+	bind_unknown_unknown_6(M); // OK
+
+//	bind_unknown_unknown_7(M); //
+//	bind_unknown_unknown_8(M); // generic_type: type "LongSpeedAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
+//	bind_unknown_unknown_9(M); // generic_type: type "SynchronizeAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
+//	bind_unknown_unknown_10(M); // generic_type: type "VisibilityAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
+//	bind_unknown_unknown_11(M); //
+//	bind_unknown_unknown_12(M); // generic_type: type "TrigByStandStill" referenced unknown base type "scenarioengine::TrigByEntity"
+
+	bind_unknown_unknown_13(M); // OK scenarioengine::ScenarioEngine
 
 }
 

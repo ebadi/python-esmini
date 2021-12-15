@@ -42,10 +42,10 @@ python3 example/modlist.py
 Install [binder](https://github.com/RosettaCommons/binder) and rebuild pybind11 bindings: 
 ```shell
 git clone https://github.com/esmini/esmini.git
-cd esmini ; cmake . ; cmake --build . 
+cd esmini ; cmake . ; cmake --build .  # solves "fatal error: 'osi_sensordata.pb.h' file not found"
 cd ..
 ./dev-build-bindings.sh
-rm LOG_FILE.txt ; pip3 install .  --log LOG_FILE.txt
+rm -rf LOG_FILE.txt cmake_install.cmake CMakeCache.txt CMakeFiles ; pip3 install .  --log LOG_FILE.txt # cmake  build  ; make ;
 ```
 
 Generating API documentation:
