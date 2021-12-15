@@ -20,9 +20,9 @@ while not player.IsQuitRequested():
     print("GetParameterValueInt", player.GetParameterValueInt("test", 1))
     print("scenarioEngine method:", se.GetHeadstartTime())
 
-odr = player.GetODRManager()
-print("GetODRManager", odr)
-print("GetODRManager", dir(odr))
+rm = player.roadmanager
+print("GetODRManager", rm)
+print("GetODRManager", dir(rm))
 
 road = odr.GetRoadById(0)
 print("road::", road)

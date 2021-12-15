@@ -54,7 +54,7 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
             }
          ) );
 
-        cl.def("GetODRManager",  &ScenarioPlayer::GetODRManager, pybind11::return_value_policy::reference);
+        cl.def_readonly("roadmanager",  &ScenarioPlayer::odr_manager);
         cl.def_readonly("scenarioEngine", &ScenarioPlayer::scenarioEngine);
         cl.def_readonly("scenarioGateway", &ScenarioPlayer::scenarioGateway);
 
