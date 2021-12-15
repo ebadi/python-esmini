@@ -14,23 +14,24 @@ se = player.scenarioEngine
 
 print("scenarioEngine", se)
 print("scenarioEngine", dir(se))
-while not player.IsQuitRequested():
-    print("x")
-    player.Frame(1)
-    print("GetParameterValueInt", player.GetParameterValueInt("test", 1))
-    print("scenarioEngine method:", se.GetHeadstartTime())
 
 rm = player.roadmanager
-print("GetODRManager", rm)
-print("GetODRManager", dir(rm))
-
-road = odr.GetRoadById(0)
-print("road::", road)
-print("road.Print()::")
-road.Print()
+print("roadManager", rm)
+print("roadManager", dir(rm))
 
 sg = player.scenarioGateway
 print("scenarioGateway", sg)
 print("scenarioGateway", dir(sg))
 
+# road = rm.GetRoadById(0)
+# print("road::", road)
+# print("road.Print()::")
+# road.Print()
+
 exit()
+
+while not player.IsQuitRequested():
+    print("x")
+    player.Frame(1)
+    print("GetParameterValueInt", player.GetParameterValueInt("test", 1))
+    print("scenarioEngine method:", se.GetHeadstartTime())
