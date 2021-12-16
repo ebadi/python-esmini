@@ -2047,11 +2047,13 @@ void bind_unknown_unknown_7(std::function< pybind11::module &(std::string const 
 		cl.def("Print", (void (scenarioengine::OSCPositionRelativeRoad::*)()) &scenarioengine::OSCPositionRelativeRoad::Print, "C++: scenarioengine::OSCPositionRelativeRoad::Print() --> void");
 		cl.def("assign", (class scenarioengine::OSCPositionRelativeRoad & (scenarioengine::OSCPositionRelativeRoad::*)(const class scenarioengine::OSCPositionRelativeRoad &)) &scenarioengine::OSCPositionRelativeRoad::operator=, "C++: scenarioengine::OSCPositionRelativeRoad::operator=(const class scenarioengine::OSCPositionRelativeRoad &) --> class scenarioengine::OSCPositionRelativeRoad &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
+	//////// THIS CAUSES pyplayerbase.ScenarioPlayer TO CRASH ON IMPORT
 	std::cout << "B75_[scenarioengine::OSCPositionRoute] ";
 	{ // scenarioengine::OSCPositionRoute file: line:164
 		pybind11::class_<scenarioengine::OSCPositionRoute, std::shared_ptr<scenarioengine::OSCPositionRoute>, PyCallBack_scenarioengine_OSCPositionRoute> cl(M("scenarioengine"), "OSCPositionRoute", "");
 		cl.def( pybind11::init( [](){ return new scenarioengine::OSCPositionRoute(); }, [](){ return new PyCallBack_scenarioengine_OSCPositionRoute(); } ) );
-		cl.def( pybind11::init( [](PyCallBack_scenarioengine_OSCPositionRoute const &o){ return new PyCallBack_scenarioengine_OSCPositionRoute(o); } ) );
+		// Runtime error on import: malloc(): memory corruption
+		// cl.def( pybind11::init( [](PyCallBack_scenarioengine_OSCPositionRoute const &o){ return new PyCallBack_scenarioengine_OSCPositionRoute(o); } ) );
 		cl.def( pybind11::init( [](scenarioengine::OSCPositionRoute const &o){ return new scenarioengine::OSCPositionRoute(o); } ) );
 		cl.def("SetRouteRelativeHeading", (void (scenarioengine::OSCPositionRoute::*)(double)) &scenarioengine::OSCPositionRoute::SetRouteRelativeHeading, "C++: scenarioengine::OSCPositionRoute::SetRouteRelativeHeading(double) --> void", pybind11::arg("h_relative"));
 		cl.def("Print", (void (scenarioengine::OSCPositionRoute::*)()) &scenarioengine::OSCPositionRoute::Print, "C++: scenarioengine::OSCPositionRoute::Print() --> void");
@@ -2109,6 +2111,7 @@ void bind_unknown_unknown_7(std::function< pybind11::module &(std::string const 
 		cl.def("IsActive", (bool (scenarioengine::Controller::*)()) &scenarioengine::Controller::IsActive, "C++: scenarioengine::Controller::IsActive() --> bool");
 		cl.def("assign", (class scenarioengine::Controller & (scenarioengine::Controller::*)(const class scenarioengine::Controller &)) &scenarioengine::Controller::operator=, "C++: scenarioengine::Controller::operator=(const class scenarioengine::Controller &) --> class scenarioengine::Controller &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 	}
+
 	std::cout << "B78_[class scenarioengine::Controller * scenarioengine::InstantiateController(void *)] ";
 	// scenarioengine::InstantiateController(void *) file: line:117
 	M("scenarioengine").def("InstantiateController", (class scenarioengine::Controller * (*)(void *)) &scenarioengine::InstantiateController, "C++: scenarioengine::InstantiateController(void *) --> class scenarioengine::Controller *", pybind11::return_value_policy::automatic, pybind11::arg("args"));
@@ -2701,7 +2704,8 @@ void bind_unknown_unknown_8(std::function< pybind11::module &(std::string const 
 	std::cout << "B80_[scenarioengine::LongSpeedAction] ";
 	{ // scenarioengine::LongSpeedAction file: line:113
 		pybind11::class_<scenarioengine::LongSpeedAction, std::shared_ptr<scenarioengine::LongSpeedAction>, PyCallBack_scenarioengine_LongSpeedAction, scenarioengine::OSCPrivateAction> cl(M("scenarioengine"), "LongSpeedAction", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::LongSpeedAction(); }, [](){ return new PyCallBack_scenarioengine_LongSpeedAction(); } ) );
+        // seg fault in destructor
+		//cl.def( pybind11::init( [](){ return new scenarioengine::LongSpeedAction(); }, [](){ return new PyCallBack_scenarioengine_LongSpeedAction(); } ) );
 		cl.def( pybind11::init( [](PyCallBack_scenarioengine_LongSpeedAction const &o){ return new PyCallBack_scenarioengine_LongSpeedAction(o); } ) );
 		cl.def( pybind11::init( [](scenarioengine::LongSpeedAction const &o){ return new scenarioengine::LongSpeedAction(o); } ) );
 		cl.def_readwrite("transition_dynamics_", &scenarioengine::LongSpeedAction::transition_dynamics_);
@@ -2753,6 +2757,7 @@ void bind_unknown_unknown_8(std::function< pybind11::module &(std::string const 
 			cl.def("GetValue", (double (scenarioengine::LongSpeedAction::TargetRelative::*)()) &scenarioengine::LongSpeedAction::TargetRelative::GetValue, "C++: scenarioengine::LongSpeedAction::TargetRelative::GetValue() --> double");
 			cl.def("assign", (class scenarioengine::LongSpeedAction::TargetRelative & (scenarioengine::LongSpeedAction::TargetRelative::*)(const class scenarioengine::LongSpeedAction::TargetRelative &)) &scenarioengine::LongSpeedAction::TargetRelative::operator=, "C++: scenarioengine::LongSpeedAction::TargetRelative::operator=(const class scenarioengine::LongSpeedAction::TargetRelative &) --> class scenarioengine::LongSpeedAction::TargetRelative &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 		}
+
 
 	}
 	std::cout << "B81_[scenarioengine::LongDistanceAction] ";
@@ -4135,10 +4140,11 @@ struct PyCallBack_scenarioengine_TrigByTimeToCollision : public scenarioengine::
 
 void bind_unknown_unknown_10(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
+
 	std::cout << "B91_[scenarioengine::VisibilityAction] ";
 	{ // scenarioengine::VisibilityAction file: line:831
 		pybind11::class_<scenarioengine::VisibilityAction, std::shared_ptr<scenarioengine::VisibilityAction>, PyCallBack_scenarioengine_VisibilityAction, scenarioengine::OSCPrivateAction> cl(M("scenarioengine"), "VisibilityAction", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::VisibilityAction(); }, [](){ return new PyCallBack_scenarioengine_VisibilityAction(); } ) );
+		//cl.def( pybind11::init( [](){ return new scenarioengine::VisibilityAction(); }, [](){ return new PyCallBack_scenarioengine_VisibilityAction(); } ) );
 		cl.def( pybind11::init( [](PyCallBack_scenarioengine_VisibilityAction const &o){ return new PyCallBack_scenarioengine_VisibilityAction(o); } ) );
 		cl.def( pybind11::init( [](scenarioengine::VisibilityAction const &o){ return new scenarioengine::VisibilityAction(o); } ) );
 		cl.def_readwrite("graphics_", &scenarioengine::VisibilityAction::graphics_);
@@ -4669,6 +4675,7 @@ struct PyCallBack_scenarioengine_TrigByRelativeSpeed : public scenarioengine::Tr
 
 void bind_unknown_unknown_11(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
+
 	std::cout << "B100_[scenarioengine::TrigByReachPosition] ";
 	{ // scenarioengine::TrigByReachPosition file: line:171
 		pybind11::class_<scenarioengine::TrigByReachPosition, std::shared_ptr<scenarioengine::TrigByReachPosition>, PyCallBack_scenarioengine_TrigByReachPosition, scenarioengine::TrigByEntity> cl(M("scenarioengine"), "TrigByReachPosition", "");
@@ -4708,7 +4715,7 @@ void bind_unknown_unknown_11(std::function< pybind11::module &(std::string const
 	std::cout << "B103_[scenarioengine::TrigByRelativeDistance] ";
 	{ // scenarioengine::TrigByRelativeDistance file: line:214
 		pybind11::class_<scenarioengine::TrigByRelativeDistance, std::shared_ptr<scenarioengine::TrigByRelativeDistance>, PyCallBack_scenarioengine_TrigByRelativeDistance, scenarioengine::TrigByEntity> cl(M("scenarioengine"), "TrigByRelativeDistance", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::TrigByRelativeDistance(); }, [](){ return new PyCallBack_scenarioengine_TrigByRelativeDistance(); } ) );
+		//cl.def( pybind11::init( [](){ return new scenarioengine::TrigByRelativeDistance(); }, [](){ return new PyCallBack_scenarioengine_TrigByRelativeDistance(); } ) );
 		cl.def_readwrite("value_", &scenarioengine::TrigByRelativeDistance::value_);
 		cl.def_readwrite("freespace_", &scenarioengine::TrigByRelativeDistance::freespace_);
 		cl.def_readwrite("cs_", &scenarioengine::TrigByRelativeDistance::cs_);
@@ -4722,7 +4729,7 @@ void bind_unknown_unknown_11(std::function< pybind11::module &(std::string const
 	std::cout << "B104_[scenarioengine::TrigByCollision] ";
 	{ // scenarioengine::TrigByCollision file: line:231
 		pybind11::class_<scenarioengine::TrigByCollision, std::shared_ptr<scenarioengine::TrigByCollision>, PyCallBack_scenarioengine_TrigByCollision, scenarioengine::TrigByEntity> cl(M("scenarioengine"), "TrigByCollision", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::TrigByCollision(); }, [](){ return new PyCallBack_scenarioengine_TrigByCollision(); } ) );
+		//cl.def( pybind11::init( [](){ return new scenarioengine::TrigByCollision(); }, [](){ return new PyCallBack_scenarioengine_TrigByCollision(); } ) );
 		cl.def( pybind11::init( [](PyCallBack_scenarioengine_TrigByCollision const &o){ return new PyCallBack_scenarioengine_TrigByCollision(o); } ) );
 		cl.def( pybind11::init( [](scenarioengine::TrigByCollision const &o){ return new scenarioengine::TrigByCollision(o); } ) );
 		cl.def_readwrite("type_", &scenarioengine::TrigByCollision::type_);
@@ -4779,7 +4786,7 @@ void bind_unknown_unknown_11(std::function< pybind11::module &(std::string const
 	std::cout << "B109_[scenarioengine::TrigByRelativeSpeed] ";
 	{ // scenarioengine::TrigByRelativeSpeed file: line:314
 		pybind11::class_<scenarioengine::TrigByRelativeSpeed, std::shared_ptr<scenarioengine::TrigByRelativeSpeed>, PyCallBack_scenarioengine_TrigByRelativeSpeed, scenarioengine::TrigByEntity> cl(M("scenarioengine"), "TrigByRelativeSpeed", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::TrigByRelativeSpeed(); }, [](){ return new PyCallBack_scenarioengine_TrigByRelativeSpeed(); } ) );
+		//cl.def( pybind11::init( [](){ return new scenarioengine::TrigByRelativeSpeed(); }, [](){ return new PyCallBack_scenarioengine_TrigByRelativeSpeed(); } ) );
 		cl.def_readwrite("value_", &scenarioengine::TrigByRelativeSpeed::value_);
 		cl.def_readwrite("rule_", &scenarioengine::TrigByRelativeSpeed::rule_);
 		cl.def_readwrite("current_rel_speed_", &scenarioengine::TrigByRelativeSpeed::current_rel_speed_);
@@ -5209,7 +5216,7 @@ void bind_unknown_unknown_12(std::function< pybind11::module &(std::string const
 	std::cout << "B114_[scenarioengine::TrigByParameter] ";
 	{ // scenarioengine::TrigByParameter file: line:400
 		pybind11::class_<scenarioengine::TrigByParameter, std::shared_ptr<scenarioengine::TrigByParameter>, PyCallBack_scenarioengine_TrigByParameter, scenarioengine::TrigByValue> cl(M("scenarioengine"), "TrigByParameter", "");
-		cl.def( pybind11::init( [](){ return new scenarioengine::TrigByParameter(); }, [](){ return new PyCallBack_scenarioengine_TrigByParameter(); } ) );
+		//cl.def( pybind11::init( [](){ return new scenarioengine::TrigByParameter(); }, [](){ return new PyCallBack_scenarioengine_TrigByParameter(); } ) );
 		cl.def( pybind11::init( [](PyCallBack_scenarioengine_TrigByParameter const &o){ return new PyCallBack_scenarioengine_TrigByParameter(o); } ) );
 		cl.def( pybind11::init( [](scenarioengine::TrigByParameter const &o){ return new scenarioengine::TrigByParameter(o); } ) );
 		cl.def_readwrite("name_", &scenarioengine::TrigByParameter::name_);
@@ -5398,7 +5405,6 @@ void bind_unknown_unknown_13(std::function< pybind11::module &(std::string const
 		pybind11::class_<scenarioengine::ScenarioReader, std::shared_ptr<scenarioengine::ScenarioReader>> cl(M("scenarioengine"), "ScenarioReader", "");
 		cl.def( pybind11::init( [](class scenarioengine::Entities * a0, class scenarioengine::Catalogs * a1){ return new scenarioengine::ScenarioReader(a0, a1); } ), "doc" , pybind11::arg("entities"), pybind11::arg("catalogs"));
 		cl.def( pybind11::init<class scenarioengine::Entities *, class scenarioengine::Catalogs *, bool>(), pybind11::arg("entities"), pybind11::arg("catalogs"), pybind11::arg("disable_controllers") );
-
 		cl.def_readwrite("controller_", &scenarioengine::ScenarioReader::controller_);
 		cl.def("loadOSCFile", (int (scenarioengine::ScenarioReader::*)(const char *)) &scenarioengine::ScenarioReader::loadOSCFile, "C++: scenarioengine::ScenarioReader::loadOSCFile(const char *) --> int", pybind11::arg("path"));
 		cl.def("SetGateway", (void (scenarioengine::ScenarioReader::*)(class scenarioengine::ScenarioGateway *)) &scenarioengine::ScenarioReader::SetGateway, "C++: scenarioengine::ScenarioReader::SetGateway(class scenarioengine::ScenarioGateway *) --> void", pybind11::arg("gateway"));
@@ -5492,7 +5498,6 @@ PYBIND11_MODULE(pyscenarioengine, root_module) {
 	for(auto &p : sub_modules ) modules[p.first.size() ? p.first+"::"+p.second : p.second] = modules[p.first].def_submodule(p.second.c_str(), ("Bindings for " + p.first + "::" + p.second + " namespace").c_str() );
 
 	//pybind11::class_<std::shared_ptr<void>>(M(""), "_encapsulated_data_");
-
 	bind_unknown_unknown(M);  // OK
 	bind_unknown_unknown_1(M); // OK
 	bind_unknown_unknown_2(M); // OK
@@ -5500,14 +5505,12 @@ PYBIND11_MODULE(pyscenarioengine, root_module) {
 	bind_unknown_unknown_4(M); // OK
 	bind_unknown_unknown_5(M); // scenarioengine::ScenarioGateway
 	bind_unknown_unknown_6(M); // OK
-
-//	bind_unknown_unknown_7(M); //
-//	bind_unknown_unknown_8(M); // generic_type: type "LongSpeedAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
-//	bind_unknown_unknown_9(M); // generic_type: type "SynchronizeAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
-//	bind_unknown_unknown_10(M); // generic_type: type "VisibilityAction" referenced unknown base type "scenarioengine::OSCPrivateAction"
-//	bind_unknown_unknown_11(M); //
-//	bind_unknown_unknown_12(M); // generic_type: type "TrigByStandStill" referenced unknown base type "scenarioengine::TrigByEntity"
-
+	bind_unknown_unknown_7(M); // OK
+	bind_unknown_unknown_8(M); // OK, causes seg fault in destructor
+	bind_unknown_unknown_9(M); // OK
+	bind_unknown_unknown_10(M); // OK
+	bind_unknown_unknown_11(M); // OK
+	bind_unknown_unknown_12(M); // OK
 	bind_unknown_unknown_13(M); // OK scenarioengine::ScenarioEngine
 
 }
