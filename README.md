@@ -13,6 +13,7 @@ Example python code:
 ```python
 import pyplayerbase
 import time
+import pyscenarioengine
 
 player = pyplayerbase.ScenarioPlayer(["python-esmini", "--window",  "60", "60", "800", "400",  "--osc", "./esmini/resources/xosc/cut-in.xosc"])
 while not player.IsQuitRequested():
