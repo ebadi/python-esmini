@@ -1,3 +1,7 @@
+⚠️ NOTICE: Project No Longer Maintained
+
+This project is no longer actively maintained or supported. I have shifted my focus to a new project. Please check out [OpenScenarioDrive](https://github.com/ebadi/OpenScenarioDrive) for the latest work and updates.
+
 **python-esmini** is a python wrapper for [Environment Simulator Minimalistic (esmini)](https://github.com/esmini/esmini).
 ### Install the package
 
